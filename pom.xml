@@ -8,8 +8,8 @@
   <version>0.2-SNAPSHOT</version>
   <packaging>jar</packaging>
 
-  <name>Simple Google Geocoding Client</name>
-  <description>sggc is a simple Google Geocoding API client written in and for Java.</description>
+  <name>sggc</name>
+  <description>Simple Google Geocoding Client written in and for Java.</description>
   <url>https://github.com/kohanyirobert/sggc</url>
 
   <licenses>
