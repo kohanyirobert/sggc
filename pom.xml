@@ -6,7 +6,6 @@
   <groupId>com.github.kohanyirobert</groupId>
   <artifactId>sggc</artifactId>
   <version>0.2-SNAPSHOT</version>
-  <packaging>jar</packaging>
 
   <name>sggc</name>
   <description>Simple Google Geocoding Client written in and for Java.</description>
@@ -52,14 +51,14 @@
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+    <project.reporting.outputEncoding>${project.build.sourceEncoding}</project.reporting.outputEncoding>
   </properties>
 
   <dependencies>
     <dependency>
       <groupId>com.google.guava</groupId>
       <artifactId>guava</artifactId>
-      <version>11.0.1</version>
+      <version>12.0</version>
     </dependency>
     <dependency>
       <groupId>junit</groupId>
@@ -72,7 +71,7 @@
   <build>
     <resources>
       <resource>
-        <directory>${basedir}</directory>
+        <directory>${project.basedir}</directory>
         <targetPath>${project.build.outputDirectory}/META-INF</targetPath>
         <filtering>false</filtering>
         <includes>
@@ -86,7 +85,7 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-compiler-plugin</artifactId>
-        <version>2.3.2</version>
+        <version>2.5</version>
         <configuration>
           <source>1.6</source>
           <target>1.6</target>
@@ -135,7 +134,7 @@
               <goal>check</goal>
             </goals>
             <configuration>
-              <configLocation>https://raw.github.com/kohanyirobert/checkstyle/master/checkstyle-main.xml</configLocation>
+              <configLocation>https://raw.github.com/kohanyirobert/checkstyle/master/main.xml</configLocation>
             </configuration>
           </execution>
           <execution>
@@ -145,7 +144,7 @@
               <goal>check</goal>
             </goals>
             <configuration>
-              <configLocation>https://raw.github.com/kohanyirobert/checkstyle/master/checkstyle-test.xml</configLocation>
+              <configLocation>https://raw.github.com/kohanyirobert/checkstyle/master/test.xml</configLocation>
               <includeTestSourceDirectory>true</includeTestSourceDirectory>
             </configuration>
           </execution>

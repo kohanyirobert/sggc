@@ -16,7 +16,7 @@ final class DefaultResult implements Result {
   private final Geometry geometry;
   private final Boolean partialMatch;
 
-  // @do-not-check ParameterNumber
+  // @do-not-check-next-line ParameterNumber
   DefaultResult(
       List<Type> types,
       String formattedAddress,
@@ -69,7 +69,7 @@ final class DefaultResult implements Result {
         partialMatch());
   }
 
-  // @do-not-check CyclomaticComplexity
+  // @do-not-check-next-line CyclomaticComplexity
   @Override
   public boolean equals(Object object) {
     if (object instanceof Result) {

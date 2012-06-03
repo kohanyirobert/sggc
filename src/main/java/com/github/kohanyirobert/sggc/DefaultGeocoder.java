@@ -12,7 +12,7 @@ import javax.xml.stream.XMLStreamConstants;
 import javax.xml.stream.XMLStreamException;
 import javax.xml.stream.XMLStreamReader;
 
-// @do-not-check Class(DataAbstractionCoupling|FanOutComplexity)
+// @do-not-check-next-line Class(DataAbstractionCoupling|FanOutComplexity)
 final class DefaultGeocoder extends ForwardingExtendedXMLStreamReader implements Geocoder<Request, Response> {
 
   private static final String GEOCODE_RESPONSE = "GeocodeResponse";
@@ -104,7 +104,7 @@ final class DefaultGeocoder extends ForwardingExtendedXMLStreamReader implements
     return status;
   }
 
-  // @do-not-check CyclomaticComplexity
+  // @do-not-check-next-line CyclomaticComplexity
   private DefaultResult readResult() throws XMLStreamException {
     List<Type> types = Lists.newArrayList();
     String fomattedAddress = null;
@@ -157,7 +157,7 @@ final class DefaultGeocoder extends ForwardingExtendedXMLStreamReader implements
     return formattedAddress;
   }
 
-  // @do-not-check CyclomaticComplexity
+  // @do-not-check-next-line CyclomaticComplexity
   private DefaultAddressComponent readAddressComponent() throws XMLStreamException {
     String longName = null;
     String shortName = null;
@@ -204,7 +204,7 @@ final class DefaultGeocoder extends ForwardingExtendedXMLStreamReader implements
     return shortName;
   }
 
-  // @do-not-check CyclomaticComplexity
+  // @do-not-check-next-line CyclomaticComplexity
   private DefaultGeometry readGeometry() throws XMLStreamException {
     DefaultLocation location = null;
     LocationType locationType = null;
@@ -232,7 +232,7 @@ final class DefaultGeocoder extends ForwardingExtendedXMLStreamReader implements
     return new DefaultGeometry(location, locationType, viewport, bounds);
   }
 
-  // @do-not-check ExecutableStatementCount
+  // @do-not-check-next-line ExecutableStatementCount
   private DefaultLocation readLocation() throws XMLStreamException {
     BigDecimal latitude = null;
     BigDecimal longitude = null;
@@ -280,7 +280,7 @@ final class DefaultGeocoder extends ForwardingExtendedXMLStreamReader implements
     return new DefaultBounds(southWest, northEast);
   }
 
-  // @do-not-check ExecutableStatementCount
+  // @do-not-check-next-line ExecutableStatementCount
   private SouthWest readSouthWest() throws XMLStreamException {
     BigDecimal latitude = null;
     BigDecimal longitude = null;
@@ -304,7 +304,7 @@ final class DefaultGeocoder extends ForwardingExtendedXMLStreamReader implements
     return new DefaultLocation(latitude, longitude);
   }
 
-  // @do-not-check ExecutableStatementCount
+  // @do-not-check-next-line ExecutableStatementCount
   private NorthEast readNorthEast() throws XMLStreamException {
     BigDecimal latitude = null;
     BigDecimal longitude = null;

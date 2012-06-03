@@ -49,7 +49,7 @@ final class DefaultGeometry implements Geometry {
     return Objects.hashCode(location(), locationType(), viewport(), bounds());
   }
 
-  // @do-not-check CyclomaticComplexity
+  // @do-not-check-next-line CyclomaticComplexity
   @Override
   public boolean equals(Object object) {
     if (object instanceof Geometry) {

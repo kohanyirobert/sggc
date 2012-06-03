@@ -18,7 +18,7 @@ final class DefaultRequest implements Request {
   private final String signature;
   private final URL url;
 
-  // @do-not-check ParameterNumber
+  // @do-not-check-next-line ParameterNumber
   DefaultRequest(
       Protocol protocol,
       Output output,
@@ -114,7 +114,7 @@ final class DefaultRequest implements Request {
         signature());
   }
 
-  // @do-not-check CyclomaticComplexity
+  // @do-not-check-next-line CyclomaticComplexity
   @Override
   public boolean equals(Object object) {
     if (object instanceof DefaultRequest) {
